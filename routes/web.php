@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(array('prefix'=>'admin'),function(){
+    Route::get('index', 'admin\IndexController@index');
+});
